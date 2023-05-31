@@ -25,3 +25,7 @@ By conducting this experiment, we aim to gain insights into the trade-offs betwe
 In the results, it can be found that the Normal Softmax gave _slightly_ better performance on the metrics (F1 score: _0.3802_ in regular Softmax vs _0.3781_ in Gumbel), however the time required by the Gumbel Softmax was relatively lesser as compared with the regular Softmax (Mean epochal time: _6.487_ s in regular Softmax vs _5.845_ s in Gumbel). Both regular and Gumbel Softmax have the same time complexity in terms of number of classes _n_, given by O(n). However, the Gumbel Softmax can be computationally faster during training due to its reparametrization trick, which enables efficient gradient computation and backpropagation through the relaxation process. This makes it easier to optimize models that involve discrete decisions, such as reinforcement learning agents with discrete action spaces.
 
 **Please note**, even though the implementation of Hierarchical Softmax was part of this assignment, I was unable to get it to train properly in the TensorFlow environment. I have still left the section for it in the colab notebook, as I was unable to get the problem fixed.
+
+
+### Acknowledgement 
+Special thanks to [SAiDL](https://www.saidl.in/) for providing the problem statement.
